@@ -1,0 +1,21 @@
+{
+  "name": "abacus_exam",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "cors": "^2.8.5",
+    "exceljs": "^4.4.0",
+    "express": "^4.18.3",
+    "http": "^0.0.1-security",
+    "mongoose": "^8.2.0",
+    "path": "^0.12.7",
+    "socket.io": "^4.7.4"
+  }
+}

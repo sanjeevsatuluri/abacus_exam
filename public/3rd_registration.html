@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Student Exam System</title>
+    <link rel="stylesheet" href="styles_re.css" />
+    <link rel="icon" href="https://mcslms.in/eLearning/theme/image.php/academi/theme/1708434427/favicon" type="image/x-icon">
+  </head>
+  <body>
+    <div class="container">
+      <form id="basic-info-form" onsubmit="register3(event)">
+        <h2>Enter Your Student Info</h2>
+        <div class="form-group">
+          <label for="name">Full Name:</label>
+          <input type="text" id="name" name="name" required />
+        </div>
+        <div class="form-group">
+          <label for="school">School Name:</label>
+          <input type="text" id="school" name="school" required />
+        </div>
+        <div class="form-group">
+          <label for="roll">Roll Number:</label>
+          <input type="text" id="roll" name="roll" required />
+        </div>
+        <button type="submit">Start Exam</button>
+      </form>
+    </div>
+    <script>
+      async function register3(event) {
+        event.preventDefault(); // Prevent default form submission behavior
+
+        var formData = {
+          name: document.getElementById("name").value,
+          school: document.getElementById("school").value,
+          roll: document.getElementById("roll").value,
+        };
+
+        if (
+          formData.name.trim() === "" ||
+          formData.school.trim() === "" ||
+          formData.roll.trim() === ""
+        ) {
+          alert("Please fill out all fields.");
+          return;
+        }
+
+        try {
+          const response = await fetch("http://localhost:3000/register3", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify(formData),
+          });
+
+          if (!response.ok) {
+            throw new Error("Network response was not ok");
+          }
+
+          const data = await response.json();
+          console.log("Response:", data);
+          console.log("Answers submitted successfully");
+          window.location.href = data.redirectUrl;
+        } catch (error) {
+          console.error("Error:", error);
+        }
+      }
+    </script>
+  </body>
+</html>

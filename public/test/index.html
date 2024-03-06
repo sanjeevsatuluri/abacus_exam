@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abacus Exam</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="timer">Timer: <span id="timer">00:00</span></div>
+      <form id="quiz-form" action="http://localhost:3000/submit" method="POST">
+        <div class="table-container">
+          <div style="overflow-x: auto">
+            <table id="quiz-table1">
+              <thead>
+                <tr>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="question-cell">&nbsp;&nbsp;25<br />+ 15</td>
+                  <td class="question-cell">&nbsp;&nbsp;65<br />- 65</td>
+                  <td class="question-cell">&nbsp;&nbsp;58<br />- 40</td>
+                  <td class="question-cell">&nbsp;&nbsp;78<br />- 46</td>
+                  <td class="question-cell">&nbsp;&nbsp;15<br />+ 44</td>
+                  <td class="question-cell">&nbsp;&nbsp;77<br />- 75</td>
+                  <td class="question-cell">&nbsp;&nbsp;2<br />+ 97</td>
+                  <td class="question-cell">&nbsp;&nbsp;91<br />- 57</td>
+                  <td class="question-cell">&nbsp;&nbsp;42<br />- 33</td>
+                  <td class="question-cell">&nbsp;&nbsp;1<br />+ 18</td>
+                </tr>
+                <tr>
+                  <td>
+                    <input type="text" class="user-answer" data-correct="40" />
+                  </td>
+                  <td>
+                    <input type="text" class="user-answer" data-correct="0" />
+                  </td>
+                  <td>
+                    <input type="text" class="user-answer" data-correct="18" />
+                  </td>
+                  <td>
+                    <input type="text" class="user-answer" data-correct="32" />
+                  </td>
+                  <td>
+                    <input type="text" class="user-answer" data-correct="59" />
+                  </td>
+                  <td>
+                    <input type="text" class="user-answer" data-correct="2" />
+                  </td>
+                  <td>
+                    <input type="text" class="user-answer" data-correct="99" />
+                  </td>
+                  <td>
+                    <input type="text" class="user-answer" data-correct="34" />
+                  </td>
+                  <td>
+                    <input type="text" class="user-answer" data-correct="9" />
+                  </td>
+                  <td>
+                    <input type="text" class="user-answer" data-correct="19" />
+                  </td>
+                </tr>
+                <!-- Add more questions as needed -->
+              </tbody>
+            </table>
+          </div>
+          <table id="quiz-table2">
+            <thead>
+              <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="question-cell">&nbsp;&nbsp;47<br />+ 29</td>
+                <td class="question-cell">&nbsp;&nbsp;31<br />+ 30</td>
+                <td class="question-cell">&nbsp;&nbsp;88<br />- 9</td>
+                <td class="question-cell">&nbsp;&nbsp;57<br />+ 26</td>
+                <td class="question-cell">&nbsp;&nbsp;64<br />+ 9</td>
+                <td class="question-cell">&nbsp;&nbsp;94<br />- 21</td>
+                <td class="question-cell">&nbsp;&nbsp;34<br />+ 15</td>
+                <td class="question-cell">&nbsp;&nbsp;11<br />+ 13</td>
+                <td class="question-cell">&nbsp;&nbsp;16<br />+ 20</td>
+                <td class="question-cell">&nbsp;&nbsp;2<br />+ 2</td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="text" class="user-answer" data-correct="76" />
+                </td>
+                <td>
+                  <input type="text" class="user-answer" data-correct="61" />
+                </td>
+                <td>
+                  <input type="text" class="user-answer" data-correct="79" />
+                </td>
+                <td>
+                  <input type="text" class="user-answer" data-correct="83" />
+                </td>
+                <td>
+                  <input type="text" class="user-answer" data-correct="73" />
+                </td>
+                <td>
+                  <input type="text" class="user-answer" data-correct="73" />
+                </td>
+                <td>
+                  <input type="text" class="user-answer" data-correct="49" />
+                </td>
+                <td>
+                  <input type="text" class="user-answer" data-correct="24" />
+                </td>
+                <td>
+                  <input type="text" class="user-answer" data-correct="36" />
+                </td>
+                <td>
+                  <input type="text" class="user-answer" data-correct="4" />
+                </td>
+              </tr>
+              <!-- Add more questions as needed -->
+            </tbody>
+          </table>
+          <table id="quiz-table3">
+            <thead>
+              <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="question-cell">
+                  &nbsp;&nbsp;12<br />- 32<br />+ 80
+                </td>
+                <td class="question-cell">
+                  &nbsp;&nbsp;93<br />- 78<br />+ 64
+                </td>
+                <td class="question-cell">
+                  &nbsp;&nbsp;88<br />- 56<br />+ 60
+                </td>
+                <td class="question-cell">
+                  &nbsp;&nbsp;00<br />+ 08<br />+ 31
+                </td>
+                <td class="question-cell">
+                  &nbsp;&nbsp;38<br />- 58<br />+ 61
+                </td>
+                <td class="question-cell">
+                  &nbsp;&nbsp;01<br />+ 21<br />- 15
+                </td>
+                <td class="question-cell">
+                  &nbsp;&nbsp;30<br />+ 97<br />- 29
+                </td>
+                <td class="question-cell">
+                  &nbsp;&nbsp;61<br />- 68<br />+ 36
+                </td>
+                <td class="question-cell">
+                  &nbsp;&nbsp;43<br />+ 10<br />+ 34
+                </td>
+                <td class="question-cell">
+                  &nbsp;&nbsp;30<br />+ 97<br />- 42
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="text" class="user-answer" data-correct="60" />
+                </td>
+                <td>
+                  <input type="text" class="user-answer" data-correct="79" />
+                </td>
+                <td>
+                  <input type="text" class="user-answer" data-correct="92" />
+                </td>
+                <td>
+                  <input type="text" class="user-answer" data-correct="39" />
+                </td>
+                <td>
+                  <input type="text" class="user-answer" data-correct="41" />
+                </td>
+                <td>
+                  <input type="text" class="user-answer" data-correct="7" />
+                </td>
+                <td>
+                  <input type="text" class="user-answer" data-correct="98" />
+                </td>
+                <td>
+                  <input type="text" class="user-answer" data-correct="29" />
+                </td>
+                <td>
+                  <input type="text" class="user-answer" data-correct="87" />
+                </td>
+                <td>
+                  <input type="text" class="user-answer" data-correct="85" />
+                </td>
+              </tr>
+              <!-- Add more questions as needed -->
+            </tbody>
+          </table>
+          <table id="quiz-table4">
+            <thead>
+              <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="question-cell">&nbsp;&nbsp;4<br />X 9</td>
+                <td class="question-cell">&nbsp;&nbsp;63<br />X 1</td>
+                <td class="question-cell">&nbsp;&nbsp;6<br />X 9</td>
+                <td class="question-cell">&nbsp;&nbsp;59<br />X 0</td>
+                <td class="question-cell">&nbsp;&nbsp;15<br />X 5</td>
+                <td class="question-cell">&nbsp;&nbsp;26<br />X 3</td>
+                <td class="question-cell">&nbsp;&nbsp;13<br />X 6</td>
+                <td class="question-cell">&nbsp;&nbsp;19<br />X 4</td>
+                <td class="question-cell">&nbsp;&nbsp;12<br />X 8</td>
+                <td class="question-cell">&nbsp;&nbsp;69<br />X 1</td>
+              </tr>
+              <tr>
+                <td>
+                  <input type="text" class="user-answer" data-correct="36" />
+                </td>
+                <td>
+                  <input type="text" class="user-answer" data-correct="63" />
+                </td>
+                <td>
+                  <input type="text" class="user-answer" data-correct="54" />
+                </td>
+                <td>
+                  <input type="text" class="user-answer" data-correct="0" />
+                </td>
+                <td>
+                  <input type="text" class="user-answer" data-correct="75" />
+                </td>
+                <td>
+                  <input type="text" class="user-answer" data-correct="78" />
+                </td>
+                <td>
+                  <input type="text" class="user-answer" data-correct="78" />
+                </td>
+                <td>
+                  <input type="text" class="user-answer" data-correct="76" />
+                </td>
+                <td>
+                  <input type="text" class="user-answer" data-correct="96" />
+                </td>
+                <td>
+                  <input type="text" class="user-answer" data-correct="69" />
+                </td>
+              </tr>
+              <!-- Add more questions as needed -->
+            </tbody>
+          </table>
+        </div>
+
+        <div class="button">
+          <button type="button" onclick="submitAnswers()">Submit</button>
+        </div>
+      </form>
+    </div>
+    <script>
+      // Timer functionality
+      const currentUrl = window.location.href;
+      var timerElement = document.getElementById("timer");
+      var timerInterval;
+      var totalSeconds = 0;
+
+      function startTimer() {
+        timerInterval = setInterval(updateTimer, 1000);
+      }
+
+      function updateTimer() {
+        totalSeconds++;
+        var minutes = Math.floor(totalSeconds / 60);
+        var seconds = totalSeconds % 60;
+        timerElement.textContent = pad(minutes) + ":" + pad(seconds);
+      }
+
+      function pad(val) {
+        var valString = val + "";
+        if (valString.length < 2) {
+          return "0" + valString;
+        } else {
+          return valString;
+        }
+      }
+
+      function submitAnswers() {
+        var answers = [];
+        var questions = document.querySelectorAll(".user-answer");
+        let i = 0;
+        const decodedUrl = decodeURIComponent(currentUrl); 
+        const urlParts = decodedUrl.split("/");
+
+        // Get the last part of the path which contains the student info
+        const studentInfo = urlParts[urlParts.length - 1];
+
+        // Split the student info by '-' to get the name, school, and roll
+        const studentData = studentInfo.split("-");
+        console.log(studentData[0]);
+        answers.push({
+          name: studentData[0],
+          school: studentData[1],
+          roll: studentData[2],
+        });
+        questions.forEach(function (question) {
+          var correctAnswer = parseInt(question.getAttribute("data-correct"));
+          var userAnswer = parseInt(question.value);
+          i++;
+          answers.push({
+            question: i,
+            isCorrect: userAnswer === correctAnswer,
+          });
+        });
+
+        // Here you can perform additional operations like sending the answers to the server
+        sendAnswersToServer(answers);
+      }
+
+      function sendAnswersToServer(answers) {
+        // Assuming you have an endpoint to which you want to send the answers
+        //console.log(answers);
+        console.log(answers);
+        var endpoint = "http://localhost:3000/submit_third_grade_exam_result";
+
+        // Send a POST request with the answers as JSON data
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", endpoint, true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+        xhr.onreadystatechange = function () {
+          if (xhr.readyState === XMLHttpRequest.DONE) {
+            if (xhr.status === 200) {
+              console.log(xhr);
+              console.log("Answers submitted successfully");
+              document.body.innerHTML = xhr.response;
+            } else {
+              document.body.innerHTML = xhr.response;
+              console.log("bad request");
+            }
+          }
+        };
+        xhr.send(JSON.stringify(answers));
+      }
+
+      // Start the timer
+      startTimer();
+      setTimeout(submitAnswers, 20 * 60 * 1000);
+    </script>
+  </body>
+</html>

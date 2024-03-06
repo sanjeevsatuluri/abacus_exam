@@ -1,0 +1,61 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+  }
+  
+  .container {
+    max-width: 1600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    
+  }
+  .table-container {
+    margin-bottom: 40px; /* Add some space between tables */
+    position: relative; /* Position the container relative to its parent */
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid black;
+}
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+}
+th {
+    background-color: #f2f2f2;
+}
+.correct-answer {
+    font-style: italic !important; 
+}
+.user-answer {
+    width: 30px;
+}
+.timer {
+    font-size: 20px;
+    margin-bottom: 10px;
+    position: absolute; /* Position the timer absolutely within its container */
+    top: 10px; /* Distance from the top */
+    right: 10px; /* Distance from the right */
+}
+.button {
+    text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+    th, td {
+        font-size: 12px !important; 
+    }
+    .question-cell, .correct-answer {
+        padding: 4px !important; 
+    }
+}
+  
